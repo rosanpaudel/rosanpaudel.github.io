@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+body {
+  background-image: url(bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100vw 125vh;
+}
+.dim-bg {
+  background-color: rgba(0, 0, 0, 0.651);
+}
+/* sidebar section style starts here */
+.sidebar {
+  background-color: rgb(22, 22, 22);
+  height: 90vh;
+  width: 15vw;
+  position: fixed;
+  top: 2rem;
+  left: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar .logo a img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.219);
+  border-radius: 50%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  height: 15rem;
+}
+.menu ul {
+  text-align: center;
+}
+
+.menu ul li {
+  text-decoration: none;
+  list-style-type: none;
+  padding-top: 2rem;
+}
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgb(126, 255, 126);
+  transition: width 0.3s;
+}
+.cool-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* .menu ul li a:hover {
+    border-bottom: 2px solid rgb(126, 255, 126);
+    color: rgb(126, 255, 126);
+  } */
+.social-media {
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.social-media ul li {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+.social-media ul li a {
+  color: white;
+  font-size: 1.5rem;
+}
+/* sidebar section style ends here */
+
+/* hero section style starts here */
+
+main .hero {
+  height: 43rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .hero-wrapper {
+  background-color: rgba(255, 255, 255, 0.062);
+  height: 80%;
+  width: 70%;
+  margin-left: 12rem;
+  backdrop-filter: blur(2rem);
+  position: relative;
+  border-radius: 2rem;
+}
+.hero-wrapper .hero-title,
+.hero-wrapper .typing {
+  font-size: 5rem;
+  font-family: "Inter", sans-serif;
+}
+.hero-wrapper .hero-title {
+  color: white;
+  position: absolute;
+  top: 9rem;
+  left: 10rem;
+}
+.hero-wrapper .typing {
+  color: rgb(106, 255, 151);
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+}
+.hero-wrapper .btn {
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(126, 255, 126);
+  border: 2px solid rgb(126, 255, 126);
+  position: absolute;
+  bottom: 8rem;
+  left: 12rem;
+  padding: 0.7rem 2rem;
+  transition: 0.2s;
+}
+.hero-wrapper .btn:hover {
+  background-color: rgb(126, 255, 126);
+  color: black;
+}
+.typing {
+  margin-left: 10px;
+  position: relative;
+}
+.typing::after {
+  content: "";
+  margin-right: 1px;
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  border-right: 5px solid rgb(106, 255, 151);
+  animation: blink 0.3s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* hero section style ends here */
+
+/* About section style begins here */
+main .about-wrap {
+  height: 100vh;
+}
+main .about {
+  background-color: rgba(255, 255, 255, 0.062);
+  height: 80vh;
+  width: 70vw;
+  position: absolute;
+  top: 47rem;
+  right: 6rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(2rem);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+main .about .profile-picture {
+  margin-left: 3rem;
+  margin-bottom: 8rem;
+}
+
+.profile-picture img {
+  height: 12rem;
+  width: 12rem;
+  border: 5px solid rgba(0, 0, 0, 0.116);
+  border-radius: 50%;
+}
+
+main .about .textcontent {
+  /* background-color: red; */
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .about .textcontent h1 {
+  margin-right: 5rem;
+  margin-bottom: 3rem;
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+}
+main .about .textcontent p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+}
+main .about .textcontent ul {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+main .about .textcontent ul li {
+  list-style: none;
+  font-family: "Nunito", sans-serif;
+}
+span {
+  font-style: italic;
+  color: rgb(134, 255, 134);
+}
+/* about section style ends here */
+
+/* contact styling starts here */
+
+.contact {
+  height: 90vh;
+}
+.contact .contact-wrapper {
+  background-color: rgba(255, 255, 255, 0.062);
+  height: 80%;
+  width: 70%;
+  margin-left: 19rem;
+  backdrop-filter: blur(2rem);
+  position: relative;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.address p {
+  margin-top: 1rem;
+}
+input {
+  height: 2rem;
+  width: 20rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.2rem 0rem;
+  background: transparent;
+  color: rgb(240, 240, 240);
+  border-style: none;
+  border-bottom: 2px solid rgb(79, 255, 87);
+  outline: none;
+  font-family: "Nunito", sans-serif;
+}
+textarea {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.5rem 0rem;
+  background: transparent;
+  color: rgb(240, 240, 240);
+  border-style: none;
+  border: 2px solid rgb(126, 255, 126);
+  outline: none;
+  font-family: "Nunito", sans-serif;
+}
+.contact-form .btn button {
+  border: 2px solid rgb(126, 255, 126);
+  background: transparent;
+  color: rgb(126, 255, 126);
+  padding: 0.2rem 1rem;
+  font-size: 1rem;
+  margin-left: 8rem;
+  transition: 0.2s;
+}
+.contact-form .btn button:hover {
+  background-color: rgb(126, 255, 126);
+  color: black;
+}
+.contact-form-wrapper,
+.address-wrapper {
+  /* border: 4px solid rgba(0, 255, 0, 0.219); */
+  height: 20rem;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .contact-wrapper h2,
+.contact .contact-wrapper p {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+.contact .contact-wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1233px) {
+  * {
+    width: 100%;
+  }
+  body {
+    background-image: url(mobile-bg.png);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .sidebar {
+    background-color: rgb(22, 22, 22);
+    height: 90%;
+    width: 70%;
+    position: fixed;
+    top: 2rem;
+    left: 1rem;
+    border-radius: 20px;
+    display: none;
+  }
+  .contact .contact-wrapper,
+  main .about,
+  .hero .hero-wrapper {
+    background-color: black;
+    display: none;
+  }
+
+  .hero .hero-wrapper {
+    display: block;
+    position: absolute;
+    top: 10rem;
+    right: 15rem;
+    font-size: 2rem;
+  }
+  .hero-wrapper .hero-title,
+  .hero-wrapper .typing {
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
+    position: absolute;
+    top: 0px;
+  }
+  .hero-wrapper .hero-title {
+    top: 9rem;
+  }
+  .hero-wrapper .typing {
+    position: absolute;
+    top: 13rem;
+    left: 9rem;
+  }
+  .hero-wrapper .btn {
+    display: none;
+  }
+  main .about {
+    display: block;
+    position: absolute;
+    top: 50rem;
+    left: 8rem;
+    width: 100%;
+  }
+  .profile-picture img {
+    height: 5rem;
+    width: 5rem;
+    border: 5px solid rgba(0, 0, 0, 0.116);
+    border-radius: 50%;
+    position: absolute;
+    right: 18rem;
+  }
+  main .about .textcontent h1,
+  main .about .textcontent p {
+    text-align: center;
+    padding: 2rem;
+  }
+  main .about .textcontent h1 {
+    position: absolute;
+    top: 5rem;
+  }
+
+  main .about .textcontent p {
+    position: absolute;
+    top: 10rem;
+    right: 8rem;
+  }
+  main .about .textcontent ul {
+    position: absolute;
+    top: 25rem;
+    right: 4rem;
+  }
+  .contact .contact-wrapper {
+    display: block;
+    position: absolute;
+  }
+  .contact-wrapper .address {
+    position: absolute;
+    right: 14rem;
+  }
+  .contact-form {
+    position: absolute;
+    right: 16rem;
+  }
+  .contact-form .btn button {
+    width: 5rem;
+  }
+  textarea {
+    width: 20rem;
+  }
+}
